@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="H2 - jpa-example" uuid="35f8f2a5-f33d-4112-8fcc-6a9d4b234db5">
+    <database-info product="H2" version="1.4.196 (2017-06-10)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.196 (2017-06-10)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="JPA-EXAMPLE"/>
+    <table name="ACCOUNT" schema="PUBLIC" catalog="JPA-EXAMPLE" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNUI2ODIyQ0VfMjRBMF80M0E1Xzk5RDFfODg4RUQ4REM2NTI2KQ==" autoIncrement="true"/>
+      <column name="USER_ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="BRANCH_ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ACCOUNTNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ACCOUNTNUMBER" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="BALANCEINTURKISHCURRENCY" sqlType="DECIMAL" precision="65535" scale="32767" nullable="true" jdbcType="3"/>
+      <column name="BALANCEINEURO" sqlType="DECIMAL" precision="65535" scale="32767" nullable="true" jdbcType="3"/>
+      <column name="BALANCEINUSD" sqlType="DECIMAL" precision="65535" scale="32767" nullable="true" jdbcType="3"/>
+      <primary-key name="CONSTRAINT_E" columns="ID"/>
+      <foreign-key name="CONSTRAINT_E49" columns="BRANCH_ID" ref-table="BRANCH" ref-schema="PUBLIC" ref-catalog="JPA-EXAMPLE" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+      <foreign-key name="CONSTRAINT_E4" columns="USER_ID" ref-table="USER" ref-schema="PUBLIC" ref-catalog="JPA-EXAMPLE" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+    </table>
+    <table name="BANK" schema="PUBLIC" catalog="JPA-EXAMPLE" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfRDJBMkQ0NjJfQjAwM180Nzg2X0JBRTRfQUVFNkRGRDRCRTI2KQ==" autoIncrement="true"/>
+      <column name="BANKNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_1" columns="ID"/>
+    </table>
+    <table name="BRANCH" schema="PUBLIC" catalog="JPA-EXAMPLE" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfNzJFOTdDRDhfNUI3Ml80OUQ2X0JDQzFfMkQ1NTgxMUQzMEExKQ==" autoIncrement="true"/>
+      <column name="BRANCHNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BRANCHADDRESS" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BRANCHCITY" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BRANCHCOUNTRY" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BANK_ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_7" columns="ID"/>
+      <foreign-key name="CONSTRAINT_75" columns="BANK_ID" ref-table="BANK" ref-schema="PUBLIC" ref-catalog="JPA-EXAMPLE" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
+    </table>
+    <table name="DATABASECHANGELOG" schema="PUBLIC" catalog="JPA-EXAMPLE" type="TABLE">
+      <column name="ID" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="AUTHOR" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="FILENAME" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="DATEEXECUTED" sqlType="TIMESTAMP" precision="23" scale="10" nullable="false" jdbcType="93"/>
+      <column name="ORDEREXECUTED" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="EXECTYPE" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="MD5SUM" sqlType="VARCHAR" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DESCRIPTION" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="COMMENTS" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TAG" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LIQUIBASE" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CONTEXTS" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LABELS" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="DATABASECHANGELOGLOCK" schema="PUBLIC" catalog="JPA-EXAMPLE" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="LOCKED" sqlType="BOOLEAN" precision="1" scale="0" nullable="false" jdbcType="16"/>
+      <column name="LOCKGRANTED" sqlType="TIMESTAMP" precision="23" scale="10" nullable="true" jdbcType="93"/>
+      <column name="LOCKEDBY" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PK_DATABASECHANGELOGLOCK" columns="ID"/>
+    </table>
+    <table name="USER" schema="PUBLIC" catalog="JPA-EXAMPLE" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfRUUzNTEyOURfMTY1Rl80Njk3X0IxRjNfOUI4MzRDQzY3Mzc3KQ==" autoIncrement="true"/>
+      <column name="USERNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="USERSURNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="USERMOTHERNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="USERFATHERNAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="USERBIRTHDATE" sqlType="DATE" precision="8" scale="0" nullable="true" jdbcType="91"/>
+      <column name="USEREMAIL" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="TELEPHONENUMBER" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="MOBILEPHONENUMBER" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ADDRESS" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_2" columns="ID"/>
+    </table>
+  </data-source>
+</component>
