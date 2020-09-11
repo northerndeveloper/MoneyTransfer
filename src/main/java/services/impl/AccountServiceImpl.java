@@ -25,8 +25,16 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public List<Account> createAccounts(List<User> userList, Branch branch) throws TransferMoneyException {
 
-           if(userList == null
+            if(userList == null
+
+
                     || userList.get(0) == null) {
+
+
+
+
+
+
                 throw new TransferMoneyException("Unable to get the users for Account Modify");
         }
 
