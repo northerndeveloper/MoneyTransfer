@@ -30,11 +30,14 @@ public class AccountServiceImpl implements AccountService {
                 throw new TransferMoneyException("Unable to get the users for Account Modify");
         }
 
+
            List<Account> accounts = new ArrayList<>();
 
                accounts.add(new Account(userList.get(0), branch, "Account For Transfer", new BigDecimal("3032556"), new BigDecimal("1250"), new BigDecimal("20"), new BigDecimal("20")));
-        accounts.add(new Account(userList.get(1), branch, "Account To Transfer", new BigDecimal("3032896"), new BigDecimal("1300"), new BigDecimal("30"), new BigDecimal("30")));
-        return accounts;
+            accounts.add(new Account(userList.get(1), branch, "Account To Transfer", new BigDecimal("3032896"), new BigDecimal("1300"), new BigDecimal("30"), new BigDecimal("30")));
+
+
+                                            return accounts;
     }
 
 }
