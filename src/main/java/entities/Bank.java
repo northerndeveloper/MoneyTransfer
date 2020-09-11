@@ -11,7 +11,7 @@ public class Bank {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(updatable = false, nullable = false)
-    private long id;
+          private long id;
 
     @Column
     private String bankName;
@@ -31,7 +31,7 @@ public class Bank {
 
     public Bank(String bankName) {
 
-        this.bankName = bankName;
+                       this.bankName = bankName;
 
     }
 
