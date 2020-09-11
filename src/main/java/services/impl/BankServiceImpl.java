@@ -15,7 +15,8 @@ public class BankServiceImpl implements BankService{
     @Override
     public Bank createBank() {
 
-        Bank bank = new Bank("Akbank");
-        return bank;
+        Bank bank =
+                new Bank("Akbank");
+                return bank;
     }
 }
