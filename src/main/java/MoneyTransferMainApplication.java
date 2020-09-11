@@ -15,7 +15,7 @@ public class MoneyTransferMainApplication {
         /**
          * First it creates necessary services to send money
          */
-        GeneralServices generalServices = new GeneralServicesImpl();
+                     GeneralServices generalServices = new GeneralServicesImpl();
         generalServices.generateEntitiesForMoneyTransfer();
 
         /**
