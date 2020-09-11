@@ -31,7 +31,7 @@ public class Bank {
 
     public Bank(String bankName) {
 
-                       this.bankName = bankName;
+                                            this.bankName = bankName;
 
     }
 
