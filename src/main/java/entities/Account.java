@@ -1,129 +1,122 @@
 package entities;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
+import javax.persistence.*;
 
-/**
- * Created by kopuz on 7/10/2018.
- */
+/** Created by kopuz on 7/10/2018. */
 @Entity
 public class Account {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(updatable = false, nullable = false)
-    public long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(updatable = false, nullable = false)
+  public long id;
 
-    @OneToOne
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public User user;
+  @OneToOne
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  public User user;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Branch branch;
+  @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  public Branch branch;
 
-    @Column
-    public String accountName;
+  @Column public String accountName;
 
-    @Column
-    public BigDecimal accountNumber;
+  @Column public BigDecimal accountNumber;
 
-    @Column
-    public BigDecimal balanceInTurkishCurrency;
+  @Column public BigDecimal balanceInTurkishCurrency;
 
-    @Column
-    public BigDecimal balanceInEuro;
+  @Column public BigDecimal balanceInEuro;
 
-    @Column
-    public BigDecimal balanceInUSD;
+  @Column public BigDecimal balanceInUSD;
 
-    /**
-     * CONSTRUCTORS
-     */
+  /** CONSTRUCTORS */
 
-    /*
-    Default Constructor
-     */
-    public Account() {
+  /*
+  Default Constructor
+   */
+  public Account() {}
 
-    }
+  public Account(
+      User user,
+      Branch branch,
+      String accountName,
+      BigDecimal accountNumber,
+      BigDecimal balanceInTurkishCurrency,
+      BigDecimal balanceInEuro,
+      BigDecimal balanceInUSD) {
 
-    public Account(User user, Branch branch, String accountName, BigDecimal accountNumber, BigDecimal balanceInTurkishCurrency, BigDecimal balanceInEuro, BigDecimal balanceInUSD) {
+    this.user = user;
+    this.branch = branch;
+    this.accountName = accountName;
+    this.accountNumber = accountNumber;
+    this.balanceInTurkishCurrency = balanceInTurkishCurrency;
+    this.balanceInEuro = balanceInEuro;
+    this.balanceInUSD = balanceInUSD;
+  }
 
-        this.user = user;
-        this.branch = branch;
-        this.accountName = accountName;
-        this.accountNumber = accountNumber;
-        this.balanceInTurkishCurrency = balanceInTurkishCurrency;
-        this.balanceInEuro = balanceInEuro;
-        this.balanceInUSD = balanceInUSD;
-    }
+  /** GETTERS & SETTERS */
+  public User getUser() {
+    return user;
+  }
 
-    /**
-     * GETTERS & SETTERS
-     */
+  public void setUser(User user) {
+    this.user = user;
+  }
 
-    public User getUser() {
-        return user;
-    }
+  public Branch getBranch() {
+    return branch;
+  }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+  public void setBranch(Branch branch) {
+    this.branch = branch;
+  }
 
-    public Branch getBranch() {
-        return branch;
-    }
+  public String getAccountName() {
+    return accountName;
+  }
 
-    public void setBranch(Branch branch) {
-        this.branch = branch;
-    }
+  public void setAccountName(String accountName) {
+    this.accountName = accountName;
+  }
 
-    public String getAccountName() {
-        return accountName;
-    }
+  public long getId() {
+    return id;
+  }
 
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
+  public void setId(long id) {
+    this.id = id;
+  }
 
-    public long getId() {
-        return id;
-    }
+  public BigDecimal getBalanceInTurkishCurrency() {
+    return balanceInTurkishCurrency;
+  }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+  public void setBalanceInTurkishCurrency(BigDecimal balanceInTurkishCurrency) {
+    this.balanceInTurkishCurrency = balanceInTurkishCurrency;
+  }
 
-    public BigDecimal getBalanceInTurkishCurrency() {
-        return balanceInTurkishCurrency;
-    }
+  public BigDecimal getBalanceInUSD() {
+    return balanceInUSD;
+  }
 
-    public void setBalanceInTurkishCurrency(BigDecimal balanceInTurkishCurrency) {
-        this.balanceInTurkishCurrency = balanceInTurkishCurrency;
-    }
+  public void setBalanceInUSD(BigDecimal balanceInUSD) {
+    this.balanceInUSD = balanceInUSD;
+  }
 
-    public BigDecimal getBalanceInUSD() {
-        return balanceInUSD;
-    }
+  public BigDecimal getBalanceInEuro() {
+    return balanceInEuro;
+  }
 
-    public void setBalanceInUSD(BigDecimal balanceInUSD) {
-        this.balanceInUSD = balanceInUSD;
-    }
+  public void setBalanceInEuro(BigDecimal balanceInEuro) {
+    this.balanceInEuro = balanceInEuro;
+  }
 
-    public BigDecimal getBalanceInEuro() {
-        return balanceInEuro;
-    }
+  public BigDecimal getAccountNumber() {
+    return accountNumber;
+  }
 
-    public void setBalanceInEuro(BigDecimal balanceInEuro) {
-        this.balanceInEuro = balanceInEuro;
-    }
-
-    public BigDecimal getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(BigDecimal accountNumber) {
-        this.accountNumber = accountNumber;
-    }
+  public void setAccountNumber(BigDecimal accountNumber) {
+    this.accountNumber = accountNumber;
+  }
 }

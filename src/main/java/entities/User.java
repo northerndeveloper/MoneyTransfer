@@ -1,153 +1,140 @@
 package entities;
 
-import javax.persistence.*;
 import java.sql.Date;
+import javax.persistence.*;
 
-/**
- * Created by kopuz on 7/10/2018.
- */
+/** Created by kopuz on 7/10/2018. */
 @Entity
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(updatable = false, nullable = false)
-    private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(updatable = false, nullable = false)
+  private long id;
 
-    @Column
-    private String userName;
+  @Column private String userName;
 
-    @Column
-    private String userSurname;
+  @Column private String userSurname;
 
-    @Column
-    private String userMotherName;
+  @Column private String userMotherName;
 
-    @Column
-    private String userFatherName;
+  @Column private String userFatherName;
 
-    @Column
-    private java.sql.Date userBirthDate;
+  @Column private java.sql.Date userBirthDate;
 
-    @Column
-    private String userEmail;
+  @Column private String userEmail;
 
-    @Column
-    private String telephoneNumber;
+  @Column private String telephoneNumber;
 
-    @Column
-    private String mobilePhoneNumber;
+  @Column private String mobilePhoneNumber;
 
-    @Column
-    private String address;
+  @Column private String address;
 
-    /**
-     * CONSTRUCTORS
-     */
+  /** CONSTRUCTORS */
 
-    //Default Constructor
-    public User() {
+  // Default Constructor
+  public User() {}
 
-    }
+  public User(
+      String userName,
+      String userSurname,
+      String userMotherName,
+      String userFatherName,
+      java.sql.Date userBirthDate,
+      String userEmail,
+      String telephoneNumber,
+      String mobilePhoneNumber,
+      String address) {
 
-    public User(String userName, String userSurname, String userMotherName, String userFatherName, java.sql.Date userBirthDate,
-                String userEmail, String telephoneNumber, String mobilePhoneNumber, String address) {
+    this.userName = userName;
+    this.userSurname = userSurname;
+    this.userMotherName = userMotherName;
+    this.userFatherName = userFatherName;
+    this.userBirthDate = userBirthDate;
+    this.userEmail = userEmail;
+    this.telephoneNumber = telephoneNumber;
+    this.mobilePhoneNumber = mobilePhoneNumber;
+    this.address = address;
+  }
 
+  /** GETTERS & SETTERS */
+  public long getId() {
+    return id;
+  }
 
-        this.userName = userName;
-        this.userSurname = userSurname;
-        this.userMotherName = userMotherName;
-        this.userFatherName = userFatherName;
-        this.userBirthDate = userBirthDate;
-        this.userEmail = userEmail;
-        this.telephoneNumber = telephoneNumber;
-        this.mobilePhoneNumber = mobilePhoneNumber;
-        this.address = address;
-    }
+  public void setId(long id) {
+    this.id = id;
+  }
 
-    /**
-     * GETTERS & SETTERS
-     */
+  public String getUserName() {
+    return userName;
+  }
 
-    public long getId() {
-        return id;
-    }
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+  public String getUserSurname() {
+    return userSurname;
+  }
 
-    public String getUserName() {
-        return userName;
-    }
+  public void setUserSurname(String userSurname) {
+    this.userSurname = userSurname;
+  }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+  public String getUserMotherName() {
+    return userMotherName;
+  }
 
-    public String getUserSurname() {
-        return userSurname;
-    }
+  public void setUserMotherName(String userMotherName) {
+    this.userMotherName = userMotherName;
+  }
 
-    public void setUserSurname(String userSurname) {
-        this.userSurname = userSurname;
-    }
+  public String getUserFatherName() {
+    return userFatherName;
+  }
 
-    public String getUserMotherName() {
-        return userMotherName;
-    }
+  public void setUserFatherName(String userFatherName) {
+    this.userFatherName = userFatherName;
+  }
 
-    public void setUserMotherName(String userMotherName) {
-        this.userMotherName = userMotherName;
-    }
+  public Date getUserBirthDate() {
+    return userBirthDate;
+  }
 
-    public String getUserFatherName() {
-        return userFatherName;
-    }
+  public void setUserBirthDate(Date userBirthDate) {
+    this.userBirthDate = userBirthDate;
+  }
 
-    public void setUserFatherName(String userFatherName) {
-        this.userFatherName = userFatherName;
-    }
+  public String getUserEmail() {
+    return userEmail;
+  }
 
-    public Date getUserBirthDate() {
-        return userBirthDate;
-    }
+  public void setUserEmail(String userEmail) {
+    this.userEmail = userEmail;
+  }
 
-    public void setUserBirthDate(Date userBirthDate) {
-        this.userBirthDate = userBirthDate;
-    }
+  public String getTelephoneNumber() {
+    return telephoneNumber;
+  }
 
-    public String getUserEmail() {
-        return userEmail;
-    }
+  public void setTelephoneNumber(String telephoneNumber) {
+    this.telephoneNumber = telephoneNumber;
+  }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
-    }
+  public String getMobilePhoneNumber() {
+    return mobilePhoneNumber;
+  }
 
-    public String getTelephoneNumber() {
-        return telephoneNumber;
-    }
+  public void setMobilePhoneNumber(String mobilePhoneNumber) {
+    this.mobilePhoneNumber = mobilePhoneNumber;
+  }
 
-    public void setTelephoneNumber(String telephoneNumber) {
-        this.telephoneNumber = telephoneNumber;
-    }
+  public String getAddress() {
+    return address;
+  }
 
-    public String getMobilePhoneNumber() {
-        return mobilePhoneNumber;
-    }
-
-    public void setMobilePhoneNumber(String mobilePhoneNumber) {
-        this.mobilePhoneNumber = mobilePhoneNumber;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-
+  public void setAddress(String address) {
+    this.address = address;
+  }
 }
