@@ -10,12 +10,12 @@ public class MoneyTransferMainApplication {
   public static void main(String[] args) throws TransferMoneyException {
 
     /** First it creates necessary services to send money */
-                GeneralServices generalServices = new GeneralServicesImpl();
+    GeneralServices generalServices = new GeneralServicesImpl();
 
     generalServices.generateEntitiesForMoneyTransfer();
 
     /** Then it sends money by webservice */
-             WebServiceServices webServiceServices = new WebServiceServicesImpl();
+    WebServiceServices webServiceServices = new WebServiceServicesImpl();
     webServiceServices.getMoneyTransfer();
   }
 }
