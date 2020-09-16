@@ -15,7 +15,7 @@ public class MoneyTransferMainApplication {
          generalServices.generateEntitiesForMoneyTransfer();
 
     /** Then it sends money by webservice */
-           WebServiceServices webServiceServices = new WebServiceServicesImpl();
+              WebServiceServices webServiceServices = new WebServiceServicesImpl();
     webServiceServices.getMoneyTransfer();
   }
 }
