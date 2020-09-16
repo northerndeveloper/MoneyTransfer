@@ -20,10 +20,6 @@
 
     <build>
 
-
-
-
-
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -33,28 +29,40 @@
 
         <plugins>
 
-            <plugin>
-                <groupId>com.cosium.code</groupId>
-                <artifactId>git-code-format-maven-plugin</artifactId>
-                <version>${git-code-format-maven-plugin.version}</version>
-                <executions>
-                    <!-- On commit, format the modified java files -->
-                    <execution>
-                        <id>install-formatter-hook</id>
-                        <goals>
-                            <goal>install-hooks</goal>
-                        </goals>
-                    </execution>
-                    <!-- On Maven verify phase, fail if any file
-                    (including unmodified) is badly formatted -->
-                    <execution>
-                        <id>validate-code-format</id>
-                        <goals>
-                            <goal>validate-code-format</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.cosium.code</groupId>-->
+<!--                <artifactId>git-code-format-maven-plugin</artifactId>-->
+<!--                <version>${git-code-format-maven-plugin.version}</version>-->
+<!--                <executions>-->
+<!--                    &lt;!&ndash; On commit, format the modified java files &ndash;&gt;-->
+<!--                    <execution>-->
+<!--                        <id>install-formatter-hook</id>-->
+<!--                        <goals>-->
+<!--                            <goal>install-hooks</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                    &lt;!&ndash; On Maven verify phase, fail if any file-->
+<!--                    (including unmodified) is badly formatted &ndash;&gt;-->
+<!--                    <execution>-->
+<!--                        <id>validate-code-format</id>-->
+<!--                        <goals>-->
+<!--                            <goal>validate-code-format</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+
+<!--                <configuration>-->
+<!--                    <googleJavaFormatOptions>-->
+<!--                        <aosp>false</aosp>-->
+<!--                        <fixImportsOnly>false</fixImportsOnly>-->
+<!--                        <skipSortingImports>true</skipSortingImports>-->
+<!--                        <skipRemovingUnusedImports>true</skipRemovingUnusedImports>-->
+<!--                    </googleJavaFormatOptions>-->
+
+<!--                </configuration>-->
+
+
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
