@@ -5,7 +5,7 @@ import services.impl.GeneralServicesImpl;
 import services.impl.WebServiceServicesImpl;
 
 /**
- * Created by kopuz on 7/10/
+ * Created by kopuz on 7/10
  *
  * <p>2018.
  */
