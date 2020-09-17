@@ -48,10 +48,13 @@ public class Account {
 
     this.user = user;
     this.branch = branch;
+
     this.accountName = accountName;
     this.accountNumber = accountNumber;
     this.balanceInTurkishCurrency = balanceInTurkishCurrency;
+
     this.balanceInEuro = balanceInEuro;
+
     this.balanceInUSD = balanceInUSD;
   }
 
