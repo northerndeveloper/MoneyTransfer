@@ -59,8 +59,9 @@
                         <fixImportsOnly>false</fixImportsOnly>
                         <skipSortingImports>true</skipSortingImports>
                         <skipRemovingUnusedImports>true</skipRemovingUnusedImports>
+
                     </googleJavaFormatOptions>
-                    <indentSize>4</indentSize>
+                    <lineLength>2</lineLength>
 
                 </configuration>
 
