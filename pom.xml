@@ -33,6 +33,7 @@
                 <groupId>com.cosium.code</groupId>
                 <artifactId>git-code-format-maven-plugin</artifactId>
                 <version>${git-code-format-maven-plugin.version}</version>
+
                 <executions>
                     <!-- On commit, format the modified java files -->
                     <execution>
@@ -41,6 +42,7 @@
                             <goal>install-hooks</goal>
                         </goals>
                     </execution>
+
                     <!-- On Maven verify phase, fail if any file
                     (including unmodified) is badly formatted -->
                     <execution>
@@ -58,6 +60,7 @@
                         <skipSortingImports>true</skipSortingImports>
                         <skipRemovingUnusedImports>true</skipRemovingUnusedImports>
                     </googleJavaFormatOptions>
+                    <indentSize>4</indentSize>
 
                 </configuration>
 
