@@ -8,6 +8,7 @@ public class TransferMoneyException extends Exception {
   }
 
   public TransferMoneyException(String message, Exception ex) {
+
     super(message + ex.getStackTrace());
   }
 }

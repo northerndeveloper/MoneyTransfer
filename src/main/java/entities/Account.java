@@ -96,6 +96,7 @@ public class Account {
   }
 
   public void setBalanceInTurkishCurrency(BigDecimal balanceInTurkishCurrency) {
+
     this.balanceInTurkishCurrency = balanceInTurkishCurrency;
   }
 

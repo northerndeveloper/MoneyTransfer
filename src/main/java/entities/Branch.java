@@ -31,9 +31,11 @@ public class Branch {
   public Branch() {}
 
   public Branch(String branchName, String branchAddress, String branchCity, Bank bank) {
+
     this.branchName = branchName;
     this.branchAddress = branchAddress;
     this.branchCity = branchCity;
+
     this.bank = bank;
   }
 
