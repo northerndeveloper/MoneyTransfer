@@ -1,5 +1,0 @@
-TestWebServices.class
-services/impl/BranchServiceImplTest.class
-services/impl/UserServiceImplTest.class
-services/impl/AccountServiceImplTest.class
-services/impl/BankServiceImplTest.class
