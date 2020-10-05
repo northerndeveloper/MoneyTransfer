@@ -1,0 +1,11 @@
+/target/
+/target/surefire-reports/services.impl.AccountServiceImplTest.txt
+/target/surefire-reports/services.impl.BankServiceImplTest.txt
+/target/surefire-reports/services.impl.BranchServiceImplTest.txt
+/target/surefire-reports/services.impl.UserServiceImplTest.txt
+/target/surefire-reports/TEST-services.impl.BranchServiceImplTest.xml
+/target/surefire-reports/TEST-services.impl.BankServiceImplTest.xml
+/target/surefire-reports/TEST-services.impl.AccountServiceImplTest.xml
+/target/surefire-reports/TEST-services.impl.UserServiceImplTest.xml
+/target/surefire-reports/
+/target/
