@@ -47,6 +47,7 @@ public class Account {
       BigDecimal balanceInUSD) {
 
     this.user = user;
+
     this.branch = branch;
 
     this.accountName = accountName;
