@@ -61,6 +61,7 @@ public class Account {
 
   /** GETTERS & SETTERS */
   public User getUser() {
+
     return user;
   }
 
@@ -95,6 +96,7 @@ public class Account {
   }
 
   public BigDecimal getBalanceInTurkishCurrency() {
+
     return balanceInTurkishCurrency;
   }
 
@@ -108,6 +110,7 @@ public class Account {
   }
 
   public void setBalanceInUSD(BigDecimal balanceInUSD) {
+
     this.balanceInUSD = balanceInUSD;
   }
 
