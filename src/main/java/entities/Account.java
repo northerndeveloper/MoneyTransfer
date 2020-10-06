@@ -59,13 +59,18 @@ public class Account {
     this.balanceInUSD = balanceInUSD;
   }
 
-  /** GETTERS & SETTERS */
+  /**
+   * GETTERS &
+   *
+   * <p>SETTERS
+   */
   public User getUser() {
 
     return user;
   }
 
   public void setUser(User user) {
+
     this.user = user;
   }
 
